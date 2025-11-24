@@ -1,7 +1,7 @@
 
 pragma solidity ^0.8.20;
 
-contract Counter {
+contract FTDLCounter {
     uint256 private count;
 
 
