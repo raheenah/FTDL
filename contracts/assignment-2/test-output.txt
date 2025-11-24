@@ -1,0 +1,279 @@
+
+
+Deploying contract...
+VotingContract deployed at: 0x5fbdb2315678afecb367f032d93f642f64180aa3
+
+Registering candidates...
+ContractFunctionExecutionError: An unknown RPC error occurred.
+
+Request Arguments:
+  from:  0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+  to:    0x5fbdb2315678afecb367f032d93f642f64180aa3
+  data:  0x9eb88db600000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000004546f6c7500000000000000000000000000000000000000000000000000000000
+ 
+Contract Call:
+  address:   0x5fbdb2315678afecb367f032d93f642f64180aa3
+  function:  registerCandidate(string _name)
+  args:                       (Tolu)
+  sender:    0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+
+Docs: https://viem.sh/docs/contract/writeContract
+Details: VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation overflowed outside of an unchecked block)
+Version: viem@2.39.3
+    at getContractError (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\viem\utils\errors\getContractError.ts:81:10)
+    at writeContract.internal (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\viem\actions\wallet\writeContract.ts:242:13)
+    at async main (C:\Users\Raheenat.M_SYDANI\Projects\solidity\scripts\voting.ts:25:3) {
+  cause: TransactionExecutionError: An unknown RPC error occurred.
+
+  Request Arguments:
+    from:  0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266
+    to:    0x5fbdb2315678afecb367f032d93f642f64180aa3
+    data:  0x9eb88db600000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000004546f6c7500000000000000000000000000000000000000000000000000000000
+
+  Details: VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation overflowed outside of an unchecked block)
+  Version: viem@2.39.3
+      at getTransactionError (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\viem\utils\errors\getTransactionError.ts:44:10)
+      at sendTransaction (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\viem\actions\wallet\sendTransaction.ts:355:11)
+      at async writeContract.internal (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\viem\actions\wallet\writeContract.ts:231:14)
+      at async main (C:\Users\Raheenat.M_SYDANI\Projects\solidity\scripts\voting.ts:25:3) {
+    cause: UnknownRpcError: An unknown RPC error occurred.
+
+    Details: VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation overflowed outside of an unchecked block)
+    Version: viem@2.39.3
+        at withRetry.delay.count.count (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\viem\utils\buildRequest.ts:243:25)
+        at async attemptRetry (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\viem\utils\promise\withRetry.ts:44:22) {
+      details: 'VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation overflowed outside of an unchecked block)',
+      docsPath: undefined,
+      metaMessages: undefined,
+      shortMessage: 'An unknown RPC error occurred.',
+      version: '2.39.3',
+      code: -1,
+      [cause]: Error: VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation overflowed outside of an unchecked block)
+          at VotingContract.uint2str (contracts/assignment-2/votingContract.sol:90)
+          at VotingContract.registerCandidate (contracts/assignment-2/votingContract.sol:121)
+          at EdrProvider.#handleEdrResponse (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\hardhat\src\internal\builtin-plugins\network-manager\edr\edr-provider.ts:361:17)
+          at EdrProvider.#handleRequest (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\hardhat\src\internal\builtin-plugins\network-manager\edr\edr-provider.ts:431:35)
+          at async next (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\hardhat\src\internal\core\hook-manager.ts:122:13)
+          at async next (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\hardhat\src\internal\core\hook-manager.ts:121:13)
+          at async EdrProvider.request (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\hardhat\src\internal\builtin-plugins\network-manager\edr\edr-provider.ts:259:25)
+          at async AutomaticGasHandler.getMultipliedGasEstimation (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\hardhat\src\internal\builtin-plugins\network-manager\request-handlers\handlers\gas\multiplied-gas-estimation.ts:29:30)
+          at async AutomaticGasHandler.handle (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\hardhat\src\internal\builtin-plugins\network-manager\request-handlers\handlers\gas\automatic-gas-handler.ts:46:16)
+          at async Array.onRequest (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\hardhat\dist\src\internal\builtin-plugins\network-manager\hook-handlers\network.js:28:46)
+          at async next (C:\Users\Raheenat.M_SYDANI\Projects\solidity\node_modules\hardhat\src\internal\core\hook-manager.ts:121:13)
+    },
+    details: 'VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation overflowed outside of an unchecked block)',
+    docsPath: undefined,
+    metaMessages: [
+      'Request Arguments:',
+      '  from:  0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266\n' +
+        '  to:    0x5fbdb2315678afecb367f032d93f642f64180aa3\n' +
+        '  data:  0x9eb88db600000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000004546f6c7500000000000000000000000000000000000000000000000000000000'
+    ],
+    shortMessage: 'An unknown RPC error occurred.',
+    version: '2.39.3'
+  },
+  details: 'VM Exception while processing transaction: reverted with panic code 0x11 (Arithmetic operation overflowed outside of an unchecked block)',
+  docsPath: '/docs/contract/writeContract',
+  metaMessages: [
+    'Request Arguments:',
+    '  from:  0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266\n' +
+      '  to:    0x5fbdb2315678afecb367f032d93f642f64180aa3\n' +
+      '  data:  0x9eb88db600000000000000000000000000000000000000000000000000000000000000200000000000000000000000000000000000000000000000000000000000000004546f6c7500000000000000000000000000000000000000000000000000000000',
+    ' ',
+    'Contract Call:',
+    '  address:   0x5fbdb2315678afecb367f032d93f642f64180aa3\n' +
+      '  function:  registerCandidate(string _name)\n' +
+      '  args:                       (Tolu)\n' +
+      '  sender:    0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266'
+  ],
+  shortMessage: 'An unknown RPC error occurred.',
+  version: '2.39.3',
+  abi: [
+    {
+      inputs: [Array],
+      stateMutability: 'nonpayable',
+      type: 'constructor'
+    },
+    {
+      inputs: [Array],
+      name: 'StringsInsufficientHexLength',
+      type: 'error'
+    },
+    {
+      anonymous: false,
+      inputs: [Array],
+      name: 'CandidateRegistered',
+      type: 'event'
+    },
+    {
+      anonymous: false,
+      inputs: [Array],
+      name: 'CandidateWon',
+      type: 'event'
+    },
+    {
+      anonymous: false,
+      inputs: [Array],
+      name: 'userVoted',
+      type: 'event'
+    },
+    {
+      inputs: [Array],
+      name: 'candidateArray',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+    {
+      inputs: [Array],
+      name: 'candidates',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+    {
+      inputs: [],
+      name: 'getCandidateWithHighestVote',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+    {
+      inputs: [Array],
+      name: 'hasVoted',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+    {
+      inputs: [],
+      name: 'owner',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+    {
+      inputs: [],
+      name: 'registerAVoter',
+      outputs: [],
+      stateMutability: 'nonpayable',
+      type: 'function'
+    },
+    {
+      inputs: [Array],
+      name: 'registerCandidate',
+      outputs: [Array],
+      stateMutability: 'nonpayable',
+      type: 'function'
+    },
+    {
+      inputs: [Array],
+      name: 'registeredVoters',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+    {
+      inputs: [Array],
+      name: 'voteForACandidate',
+      outputs: [Array],
+      stateMutability: 'nonpayable',
+      type: 'function'
+    },
+    {
+      inputs: [Array],
+      name: 'votesByCandidate',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+    {
+      inputs: [],
+      type: 'function'
+    },
+    {
+      inputs: [Array],
+      name: 'voteForACandidate',
+      outputs: [Array],
+      stateMutability: 'nonpayable',
+      type: 'function'
+    },
+    {
+      inputs: [Array],
+      name: 'votesByCandidate',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+    {
+      inputs: [],
+    {
+      inputs: [Array],
+      name: 'voteForACandidate',
+      outputs: [Array],
+      stateMutability: 'nonpayable',
+      type: 'function'
+    },
+    {
+      inputs: [Array],
+      name: 'votesByCandidate',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+    {
+      inputs: [],
+      type: 'function'
+    },
+    {
+      inputs: [Array],
+      name: 'votesByCandidate',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+    {
+      inputs: [],
+    {
+      inputs: [Array],
+      name: 'votesByCandidate',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+    {
+      inputs: [],
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+    {
+      inputs: [],
+      name: 'votingEnd',
+    },
+    {
+      inputs: [],
+      name: 'votingEnd',
+      name: 'votingEnd',
+      outputs: [Array],
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    },
+      type: 'function'
+    },
+    },
+    {
+      inputs: [],
+      name: 'votingStart',
+      outputs: [Array],
+      stateMutability: 'view',
+      type: 'function'
+    }
+  ],
+  args: [ 'Tolu' ],
+  contractAddress: '0x5fbdb2315678afecb367f032d93f642f64180aa3',
+  formattedArgs: undefined,
+  functionName: 'registerCandidate',
+  sender: '0xf39fd6e51aad88f6f4ce6ab8827279cfffb92266'
+}                                                git add .                        

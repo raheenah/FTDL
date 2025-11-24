@@ -12,7 +12,7 @@ async function main() {
   console.log("\nDeploying contract...");
 
   const voting = await viem.deployContract("VotingContract", [86400n]); 
-  console.log("VotingContract deployed at:", voting.address);
+  // console.log("VotingContract deployed at:", voting.address);
 
   const accounts = await viem.getWalletClients();
   const owner = accounts[0];
@@ -20,7 +20,7 @@ async function main() {
   const voter2 = accounts[2];
 
   // 2. Register candidates
-  console.log("\nRegistering candidates...");
+  // console.log("\nRegistering candidates...");
 
   await voting.write.registerCandidate(["Tolu"]);
   await voting.write.registerCandidate(["Bisi"]);
@@ -59,7 +59,7 @@ await voting.write.registerAVoter({
   console.log("\nGetting winner...");
 
   const winner = await voting.read.getCandidateWithHighestVote();
-  console.log("Winner:", {
+  console.log("Winner:", winner, {
     id: winner.id.toString(),
     name: winner.name,
     votes: winner.score.toString(),
